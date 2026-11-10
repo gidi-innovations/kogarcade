@@ -1,0 +1,371 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>KoG Arcade</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="shared/style.css">
+
+<header class="bar" id="siteBar">
+  <div class="wrap hdr">
+    <a class="logo" href="#home" aria-label="KoG Arcade, Kingdom of God Arcade, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 31L7 11l8 9 5-12 5 12 8-9 2 20z" fill="#F2A007" stroke="#13203A" stroke-width="2.5" stroke-linejoin="round"/><rect x="5" y="30" width="30" height="5" rx="1.5" fill="#D7263D" stroke="#13203A" stroke-width="2.5"/><circle cx="20" cy="22" r="2.6" fill="#1F55D6" stroke="#13203A" stroke-width="1.5"/></svg>
+      <span class="brand"><b>KoG Arcade</b><small>Kingdom of God Arcade</small></span>
+    </a>
+    <nav class="snav" id="snavWrap" aria-label="Homepage sections"><div class="snavin" id="snav">
+    <button type="button" data-go="s-play" class="on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>Play</button>
+    <button type="button" data-go="s-continue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 107-7H8" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M9 1L5 5l4 4" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Continue</button>
+    <button type="button" data-go="s-journey"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.1l1.4-7L2 9.3l7-.8z" fill="currentColor"/></svg>My Journey</button>
+    <button type="button" data-go="s-collections"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18L5 6l5 6 2-8 2 8 5-6 2 12z" fill="currentColor"/></svg>Collections</button>
+    <button type="button" data-go="s-library" class="allbtn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="currentColor"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="currentColor"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="currentColor"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="currentColor"/></svg>All Games</button>
+  </div></nav>
+    <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg><input id="q" type="search" placeholder="Search games…" autocomplete="off" aria-label="Search games"></label>
+    <button type="button" class="mystars" id="myStars" data-go="s-journey" aria-label="Your stars"></button>
+    <button type="button" class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="snavWrap" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg><span>Menu</span></button>
+  </div>
+</header>
+
+<main>
+<section id="home">
+  <div class="kingdom" id="s-play">
+    <svg class="kbg" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <g fill="#fff"><circle cx="80" cy="60" r="2"/><circle cx="240" cy="30" r="1.4"/><circle cx="420" cy="80" r="1.8"/><circle cx="610" cy="24" r="1.4"/><circle cx="760" cy="70" r="2"/><circle cx="930" cy="36" r="1.6"/><circle cx="1110" cy="90" r="2"/><circle cx="1010" cy="140" r="1.3"/><circle cx="170" cy="150" r="1.3"/></g>
+      <g class="tw" fill="#FFD447"><path d="M330 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path d="M880 150l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M1150 40l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
+      <path d="M0 300q160-60 330-30t330-20 300-10 240 30V360H0z" fill="#3B2A86" opacity=".7"/>
+      <g fill="#2A1D66"><path d="M930 300V214h16v-16h12v16h20v-34l22-26 22 26v34h20v-16h12v16h16v86z"/><path d="M990 180h24v-20l-12-14-12 14z"/></g>
+      <path d="M0 330q200-40 420-14t420-6 360 10V360H0z" fill="#221858"/>
+    </svg>
+    <div class="wrap"><a class="feature" id="feature" href="#"></a></div>
+  </div>
+
+  <div class="wrap homegrid">
+    <section class="sect" id="s-jump" aria-labelledby="hJump">
+      <div class="sect-h"><h2 id="hJump">Jump Straight In</h2><span>Tap a game to play</span></div>
+      <div class="jrow big" id="jump"></div>
+    </section>
+
+    <div class="duo">
+      <section class="sect" id="s-continue" aria-labelledby="hCont">
+        <div class="sect-h"><h2 id="hCont">Continue Playing</h2></div>
+        <div id="cont"></div>
+      </section>
+      <section class="sect" id="s-journey" aria-labelledby="hJour">
+        <div class="sect-h"><h2 id="hJour">Your Kingdom Journey</h2><span>Saved on this device only</span></div>
+        <div id="journey"></div>
+      </section>
+    </div>
+
+    <section class="sect" id="s-collections" aria-labelledby="hCol">
+      <div class="sect-h"><h2 id="hCol">Collections</h2></div>
+      <div class="ctabs" id="ctabs" role="tablist" aria-label="Game collections"></div>
+      <div class="cpanel" id="cpanel" role="tabpanel"></div>
+      <div class="together" id="together"></div>
+    </section>
+
+    <section class="sect" id="s-library" aria-labelledby="hLib">
+      <div class="sect-h"><h2 id="hLib">All Games</h2><span id="libCount"></span></div>
+      <div class="libbar">
+        <label class="search lib" for="q2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg><input id="q2" type="search" placeholder="Search all games…" autocomplete="off" aria-label="Search all games"></label>
+        <div class="themes" id="types" role="group" aria-label="Filter by type of game"></div>
+      </div>
+      <div id="library"></div>
+      <div class="soonwrap" id="soon"></div>
+    </section>
+  </div>
+</section>
+
+<section id="game" hidden>
+  <div class="gbar"><div class="wrap">
+    <a class="allgames" href="#all" id="allGames"></a>
+    <span class="gtitle" id="gTitle"></span>
+    <div class="gctl">
+      <button type="button" class="help" id="gHelp" hidden></button>
+      <button type="button" id="gPause" hidden></button>
+      <button type="button" id="gRestart" hidden></button>
+      <button type="button" id="gSound" hidden aria-label="Sound"></button>
+      <button type="button" id="gFull" class="full" aria-pressed="false"></button>
+    </div>
+  </div></div>
+  <div class="wrap gwrap" id="gwrap"><div class="stage" id="stage"></div></div>
+</section>
+</main>
+
+<div class="pause-ov" id="pauseOv" hidden role="dialog" aria-modal="true" aria-labelledby="pTitle">
+  <div class="card2">
+    <h2 id="pTitle">Paused</h2>
+    <button class="btn big" id="pResume">▶ Resume</button>
+    <button class="btn ghost" id="pRestart">Restart this game</button>
+    <button class="btn more" id="pHome">Exit to KoG Arcade</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+<footer><div class="wrap"><span>KoG Arcade · Made by GIDI · Play. Discover. Learn. Grow.</span><span>Scripture quotations from the King James Version</span></div></footer>
+
+<script src="shared/common.js"></script>
+<script src="shared/catalog.js"></script>
+<script>
+/* Hub: Featured Adventure, Jump Straight In, Continue Playing, Kingdom Journey, Collections, All Games.
+   Each game lives in games/<id>.js and loads only when needed. Progress is read from this browser only. */
+(() => {
+  const games = window.ARK_CATALOG || [], cols = window.ARK_COLLECTIONS || [], TYPES = window.ARK_TYPES || {};
+  const playable = games.filter(g => g.play), soonGames = games.filter(g => !g.play), ids = playable.map(g => g.id);
+  const byId = id => games.find(g => g.id === id);
+  const $ = id => document.getElementById(id);
+  const esc = Ark.esc;
+  let q = '', type = 'all', col = Ark.store('home-col') || cols[0]?.id;
+  if (!cols.some(c => c.id === col)) col = cols[0]?.id;
+
+  // Labels for the game bar buttons
+  $('allGames').innerHTML = Ark.UI.back + '<span>Exit</span>';
+  $('allGames').setAttribute('href', '#home'); $('allGames').setAttribute('aria-label', 'Exit the game and go back to KoG Arcade');
+  $('gHelp').innerHTML = Ark.UI.help + '<span class="t">Help me</span>';
+  $('gPause').innerHTML = Ark.UI.pause + '<span class="t">Pause</span>';
+  $('gRestart').innerHTML = Ark.UI.restart + '<span class="t">Restart</span>';
+  Ark.wireBar();
+
+  /* ---------- pieces ---------- */
+  const diffDots = id => {
+    const s = Ark.starsOf(id);
+    return `<span class="ddots">${Ark.DIFFS.map(d => `<i class="${d} ${s[d] ? 'on' : ''}" title="${Ark.DLABEL[d]}${s[d] ? ': ' + s[d] + ' star' + (s[d] > 1 ? 's' : '') : ''}">${Ark.DLABEL[d][0]}</i>`).join('')}</span>`;
+  };
+  function card(x) {
+    const best = Ark.bestStars(x.id);
+    return `<a class="card" href="#${x.id}" data-pre="${x.id}" aria-label="${esc(x.t)}${best ? `, best ${best} of 3 stars` : ''}">
+      <div class="thumb">${Ark.scene(x.g, x.sky[0], x.sky[1], 'c-' + x.id + '-' + (++card.n), x.bg)}${Ark.typeChip(x.type)}<span class="playfab">${Ark.UI.play}</span></div>
+      <div class="meta"><h3>${x.t}</h3><div class="foot">${Ark.starRow(best)}${diffDots(x.id)}</div></div></a>`;
+  }
+  card.n = 0;
+  function soonCard(x) {
+    return `<div class="card soon" tabindex="0" role="button" aria-label="${esc(x.t)}, coming soon">
+      <div class="thumb">${Ark.scene(x.g, x.sky[0], x.sky[1], 's-' + x.id, x.bg)}<span class="badge">Coming soon</span></div>
+      <div class="meta"><h3>${x.t}</h3><p>${x.b}</p></div></div>`;
+  }
+
+  /* ---------- Featured Adventure: Game of the Week (changes every Monday) ---------- */
+  function renderFeature() {
+    const week = Math.floor((Math.floor(Date.now() / 864e5) + 3) / 7);
+    const pool = playable.slice().sort((a, b) => (a.hot || 99) - (b.hot || 99));
+    const f = pool[week % pool.length], best = Ark.bestStars(f.id);
+    const el = $('feature');
+    el.href = '#' + f.id; el.dataset.pre = f.id;
+    el.setAttribute('aria-label', `Game of the Week: ${f.t}. Play now`);
+    el.innerHTML = `<div class="art">${Ark.scene(f.g, f.sky[0], f.sky[1], 'feat', f.bg)}${Ark.typeChip(f.type)}</div>
+      <div class="txt"><span class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18L5 6l5 6 2-8 2 8 5-6 2 12z" fill="currentColor"/></svg>Featured Adventure · Game of the Week</span>
+        <h1>${f.t}</h1><p>${f.b}</p>
+        <div class="fmeta">${best ? `<span>Your best ${Ark.starRow(best)}</span>` : '<span class="fnew">Try it this week!</span>'}<span class="lvls">Easy · Normal · Hard</span></div>
+        <span class="btn big playnow">${Ark.UI.play} Play Now</span></div>
+      <div class="pipbox">${Ark.pip('bob')}<span class="say">Let’s go!</span></div>`;
+  }
+
+  /* ---------- Jump Straight In ---------- */
+  function renderJump() {
+    $('jump').innerHTML = playable.filter(g => g.hot).sort((a, b) => a.hot - b.hot).map(Ark.jtile).join('');
+  }
+
+  /* ---------- Continue Playing ---------- */
+  function renderContinue() {
+    const last = byId(Ark.store('last'));
+    if (!last || !last.play) {
+      $('cont').innerHTML = `<div class="cont empty">${Ark.pip()}<div><b>Your last game will wait for you here.</b><p>Pick a game above to start playing.</p></div></div>`;
+      return;
+    }
+    const d = Ark.store('diff-' + last.id), s = Ark.starsOf(last.id);
+    $('cont').innerHTML = `<a class="cont" href="#${last.id}" data-pre="${last.id}" aria-label="Continue ${esc(last.t)}">
+      <div class="cthumb">${Ark.scene(last.g, last.sky[0], last.sky[1], 'cont', last.bg)}</div>
+      <div class="ctxt"><span class="eyebrow">Last played</span><h3>${last.t}</h3>
+        <div class="crow">${Ark.DIFFS.map(x => `<span class="cd ${x}">${Ark.DLABEL[x]} ${Ark.starRow(s[x] || 0)}</span>`).join('')}</div>
+        <span class="btn">${Ark.UI.play} Continue${Ark.DIFFS.includes(d) ? ' on ' + Ark.DLABEL[d] : ''}</span></div></a>`;
+  }
+
+  /* ---------- Your Kingdom Journey (only real saved progress) ---------- */
+  const RANKS = [[0, 'New Explorer'], [5, 'Faithful Shepherd'], [15, 'Brave Scout'], [30, 'Kingdom Champion'], [60, 'Hero of Faith'], [90, 'Crown Keeper']];
+  function renderJourney() {
+    const got = Ark.totalStars(ids), max = ids.length * 9;
+    const played = ids.filter(id => Ark.bestStars(id) > 0).length;
+    const three = ids.filter(id => Ark.bestStars(id) === 3).length;
+    const hard = ids.filter(id => (Ark.starsOf(id).hard || 0) > 0).length;
+    const ri = RANKS.reduce((r, x, i) => (got >= x[0] ? i : r), 0), rank = RANKS[ri], next = RANKS[ri + 1];
+    const toNext = next ? (got - rank[0]) / (next[0] - rank[0]) : 1;
+    $('myStars').innerHTML = Ark.STAR(true) + `<span>${got}</span>`;
+    $('myStars').setAttribute('aria-label', `${got} stars. Open your journey`);
+
+    // Personal bests saved by individual games, shown only when they exist.
+    const pb = [];
+    const fruit = Ark.DIFFS.map(d => [d, +(Ark.store('fruit-pts-' + d) || 0)]).filter(x => x[1]);
+    if (fruit.length) { const t = fruit.reduce((a, b) => (b[1] > a[1] ? b : a)); pb.push(['fruit-catch', 'Fruit Catch', `${t[1]} points`, Ark.DLABEL[t[0]]]); }
+    const noah = Ark.storeJSON('noah-best') || {}, nb = Ark.DIFFS.filter(d => noah[d]).map(d => [d, noah[d]]);
+    if (nb.length) { const t = nb.reduce((a, b) => (b[1] > a[1] ? b : a)); pb.push(['noahs-ark', 'Noah’s Ark', `${t[1]} points`, Ark.DLABEL[t[0]]]); }
+    const rsr = Ark.storeJSON('rsr-best') || {}, rb = Ark.DIFFS.filter(d => rsr[d]).map(d => [d, rsr[d]]);
+    if (rb.length) { const t = rb.reduce((a, b) => (b[1] > a[1] ? b : a)); pb.push(['red-sea-run', 'Red Sea Run', `${t[1]} points`, Ark.DLABEL[t[0]]]); }
+    const fsb = Ark.storeJSON('fs-best') || {}, fb = Ark.DIFFS.filter(d => fsb[d]).map(d => [d, fsb[d]]);
+    if (fb.length) { const t = fb.reduce((a, b) => (b[1] > a[1] ? b : a)); pb.push(['fruit-vs-flesh', 'Fruit Splash', `${t[1]} points`, Ark.DLABEL[t[0]]]); }
+    const lsb = Ark.storeJSON('lsr-best') || {}, lb = Ark.DIFFS.filter(d => lsb[d]).map(d => [d, lsb[d]]);
+    if (lb.length) { const t = lb.reduce((a, b) => (b[1] > a[1] ? b : a)); pb.push(['bible-discovery', 'Lost Sheep', `${t[1]} points`, Ark.DLABEL[t[0]]]); }
+    const verses = Ark.DIFFS.reduce((s, d) => s + (+(Ark.store('vr-ladder-' + d) || 0)), 0);
+    if (verses) pb.push(['verse-racer', 'Verse Racer', `${verses} verse${verses > 1 ? 's' : ''} unlocked`, 'All levels']);
+    const badges = Object.keys(Ark.storeJSON('noah-badges') || {}).length + (Ark.storeJSON('fruit-badges') || []).length + Object.keys(Ark.storeJSON('rsr-badges') || {}).length;
+    if (badges) pb.push([null, 'Badges', `${badges} earned`, 'Noah, Red Sea & Fruit']);
+
+    $('journey').innerHTML = `<div class="journey">
+      <div class="jhead">${Ark.pip('sm')}<div><span class="eyebrow">Your rank</span><b class="rank">${rank[1]}</b>
+        ${next ? Ark.bar(toNext, `${next[0] - got} more ★ to ${next[1]}`, 'gold') : Ark.bar(1, 'Top rank reached!', 'gold')}</div></div>
+      <div class="kstats">
+        <div><b>${got}<small>/${max}</small></b><span>Stars</span></div>
+        <div><b>${played}<small>/${playable.length}</small></b><span>Games played</span></div>
+        <div><b>${three}</b><span>3-star games</span></div>
+        <div><b>${hard}</b><span>Hard cleared</span></div>
+      </div>
+      ${pb.length ? `<div class="pbs"><span class="eyebrow">Personal bests</span>${pb.map(([id, t, v, d]) => id
+        ? `<a class="pb" href="#${id}" data-pre="${id}"><b>${t}</b><span>${v}</span><small>${d}</small></a>`
+        : `<div class="pb"><b>${t}</b><span>${v}</span><small>${d}</small></div>`).join('')}</div>`
+        : `<p class="jnote">${got ? 'Keep going! Your best scores will show here.' : 'Play any game to earn your first stars. Your best scores will show here.'}</p>`}
+    </div>`;
+  }
+
+  /* ---------- Collections (one at a time, big tabs) ---------- */
+  function renderCollections() {
+    $('ctabs').innerHTML = cols.map(c => `<button type="button" role="tab" class="ctab" data-c="${c.id}" aria-selected="${c.id === col}" style="--c1:${c.c[0]};--c2:${c.c[1]}">
+      <span class="ci">${Ark.G[c.icon] || ''}</span><b>${c.t}</b><small>${(n => n + (n === 1 ? ' game' : ' games'))(c.ids.filter(id => byId(id)?.play).length)}</small></button>`).join('');
+    $('ctabs').querySelectorAll('[data-c]').forEach(b => (b.onclick = () => { col = b.dataset.c; Ark.store('home-col', col); renderCollections(); }));
+    const c = cols.find(x => x.id === col);
+    const list = c.ids.map(byId).filter(g => g && g.play);
+    $('cpanel').style.setProperty('--c1', c.c[0]); $('cpanel').style.setProperty('--c2', c.c[1]);
+    $('cpanel').innerHTML = `<div class="cph"><b>${c.t}</b><span>${c.d}</span></div>
+      <div class="rail">${list.map(card).join('')}${c.soon ? `<div class="soonnote" role="note"><span class="badge">Coming soon</span><p>${c.soon}</p></div>` : ''}</div>`;
+    // Play Together: real two-player games are playable; future challenges are clearly marked and not tappable.
+    const noah = byId('noahs-ark'), rsr = byId('red-sea-run');
+    $('together').innerHTML = `<div class="tg-h"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="4" fill="currentColor"/><circle cx="16.5" cy="8" r="4" fill="currentColor" opacity=".6"/><path d="M1 21c0-4 3-7 7-7s7 3 7 7zM12 21c.5-3.5 2-6 4.5-6 4 0 6.5 3 6.5 6z" fill="currentColor"/></svg><b>Play Together</b></div>
+      <div class="tg-row">
+        ${noah && noah.play ? `<a class="tg-card" href="#noahs-ark" data-pre="noahs-ark"><span class="ji" style="--c1:${noah.sky[0]};--c2:${noah.sky[1]}">${Ark.G.ark}</span><span><b>Noah’s Ark: 2 players</b><small>Take turns on one device. Choose “2 players” before you start.</small></span><span class="playpill">Play</span></a>` : ''}
+        ${rsr && rsr.play ? `<a class="tg-card" href="#red-sea-run" data-pre="red-sea-run"><span class="ji" style="--c1:${rsr.sky[0]};--c2:${rsr.sky[1]}">${Ark.G.wave}</span><span><b>Red Sea Run: 2 players</b><small>Take turns on the same course. Choose “2 players” before you start.</small></span><span class="playpill">Play</span></a>` : ''}
+        <div class="tg-card future" aria-disabled="true"><span class="ji lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2.5" fill="currentColor"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="2.6" fill="none"/></svg></span><span><b>Two-Player Challenges</b><small>Head-to-head Bible challenges are being built. Not playable yet.</small></span><span class="badge">Coming later</span></div>
+      </div>`;
+  }
+
+  /* ---------- All Games library ---------- */
+  function renderTypes() {
+    const used = [...new Set(playable.map(g => g.type))].filter(Boolean);
+    $('types').innerHTML = [['all', 'All games', ''], ...used.map(t => [t, TYPES[t] || t, Ark.TYPE[t] || ''])].map(([id, t, ic]) => `<button type="button" class="chip" data-t="${id}" aria-pressed="${id === type}">${ic}${t}</button>`).join('');
+    $('types').querySelectorAll('[data-t]').forEach(b => (b.onclick = () => { type = b.dataset.t; renderTypes(); renderLibrary(); }));
+  }
+  function renderLibrary() {
+    const match = g => !q || (g.t + ' ' + g.s + ' ' + g.b + ' ' + (TYPES[g.type] || '') + ' ' + cols.filter(c => c.ids.includes(g.id)).map(c => c.t).join(' ')).toLowerCase().includes(q);
+    const hits = playable.filter(g => (type === 'all' || g.type === type) && match(g));
+    $('libCount').textContent = q || type !== 'all' ? `${hits.length} of ${playable.length} games` : `${playable.length} games to play`;
+    $('library').innerHTML = hits.length ? `<div class="grid">${hits.map(card).join('')}</div>`
+      : `<p class="empty">No games match${q ? ` “${esc(q)}”` : ''}. Try “David”, “verse” or “quiz”.</p>`;
+    const sh = soonGames.filter(match);
+    $('soon').innerHTML = sh.length ? `<div class="sect-h"><h3>Coming Soon</h3><span>Not playable yet</span></div><div class="grid">${sh.map(soonCard).join('')}</div>` : '';
+  }
+
+  function renderHome() {
+    card.n = 0;
+    renderFeature(); renderJump(); renderContinue(); renderJourney(); renderCollections(); renderTypes(); renderLibrary();
+  }
+
+  /* ---------- search (header and library boxes stay in step) ---------- */
+  function onSearch(e) {
+    const v = e.target.value;
+    $('q').value = $('q2').value = v;
+    const was = q; q = v.trim().toLowerCase();
+    if (location.hash && !['#home', '#all', ''].includes(location.hash)) { location.hash = 'home'; return; }
+    renderLibrary();
+    if (q && !was && e.target.id === 'q') goTo('s-library');
+  }
+  $('q').addEventListener('input', onSearch);
+  $('q2').addEventListener('input', onSearch);
+  $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); goTo('s-library'); } });
+  $('home').addEventListener('click', e => { const c = e.target.closest('.card.soon'); if (c) Ark.toast(c.querySelector('h3').textContent + ' is coming soon!'); });
+  $('home').addEventListener('keydown', e => { const c = e.target.closest('.card.soon'); if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); c.click(); } });
+
+  /* ---------- section navigation ---------- */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function goTo(id, instant) {
+    const el = $(id); if (!el) return;
+    const off = $('siteBar').getBoundingClientRect().height + 8;
+    const y = id === 's-play' ? 0 : el.getBoundingClientRect().top + scrollY - off;
+    scrollTo({ top: y, behavior: instant || reduce ? 'auto' : 'smooth' });
+    mark(id);
+  }
+  const menu = open => { $('siteBar').classList.toggle('open', open); $('menuBtn').setAttribute('aria-expanded', open); };
+  $('menuBtn').onclick = () => { const open = !$('siteBar').classList.contains('open'); menu(open); if (open) setTimeout(() => $('q').focus({ preventScroll: true }), 50); };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('siteBar').classList.contains('open')) menu(false); });
+  document.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) { menu(false); goTo(b.dataset.go); } else if (!e.target.closest('#siteBar')) menu(false); });
+  const navMap = { 's-play': 's-play', 's-jump': 's-play', 's-continue': 's-continue', 's-journey': 's-journey', 's-collections': 's-collections', 's-library': 's-library' };
+  function mark(id) {
+    $('snav').querySelectorAll('[data-go]').forEach(b => { const on = b.dataset.go === id; b.classList.toggle('on', on); on ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'); });
+  }
+  // Highlight the section in view: the last section whose top has passed the line under the header.
+  let ticking = false;
+  function spy() {
+    ticking = false;
+    if ($('home').hidden) return;
+    const line = $('siteBar').getBoundingClientRect().height + innerHeight * .25;
+    let cur = 's-play';
+    for (const id of Object.keys(navMap)) { const el = $(id); if (el && el.getBoundingClientRect().top <= line) cur = navMap[id]; }
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) cur = 's-library';
+    mark(cur);
+  }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
+
+  /* ---------- loading: fetch a game's file as soon as a finger or mouse is on its card ---------- */
+  const loading = {};
+  function load(id) {
+    if (Ark.games[id]) return Promise.resolve();
+    if (!loading[id]) loading[id] = new Promise((ok, fail) => {
+      const s = document.createElement('script');
+      s.src = `games/${id}.js`;
+      s.onload = () => (Ark.games[id] ? ok() : fail());
+      s.onerror = () => { delete loading[id]; s.remove(); fail(); };
+      document.body.appendChild(s);
+    });
+    return loading[id];
+  }
+  const pre = e => { const c = e.target.closest && e.target.closest('[data-pre]'); if (c) load(c.dataset.pre).catch(() => {}); };
+  document.addEventListener('pointerover', pre, { passive: true });
+  document.addEventListener('touchstart', pre, { passive: true });
+  document.addEventListener('focusin', pre);
+
+  /* ---------- router: #home, #all (library) or #<game id> ---------- */
+  let current = null;
+  const stage = $('stage');
+  let homeY = 0, launched = 0;
+  function route() {
+    const id = location.hash.slice(1);
+    const game = playable.find(g => g.id === id);
+    const wasGame = document.body.classList.contains('in-game');
+    if (game && !wasGame) homeY = scrollY;
+    if (!game && Ark.isFull()) Ark.setFull(false);
+    if (current && Ark.games[current]) { try { Ark.games[current].unmount(); } catch (e) {} }
+    current = null; Ark.ctl(null); Ark.hush();
+    $('home').hidden = !!game; $('game').hidden = !game; $('siteBar').hidden = !!game;
+    document.querySelector('footer').hidden = !!game;
+    document.body.classList.toggle('in-game', !!game);
+    $('stage').dataset.game = game ? game.id : '';
+    if (!game) {
+      renderHome();
+      if (id === 'all') goTo('s-library', true); else { mark('s-play'); window.scrollTo(0, wasGame && id === 'home' ? homeY : 0); }
+      return;
+    }
+    $('gwrap').scrollTop = 0;
+    Ark.store('last', id);
+    $('gTitle').textContent = game.t;
+    // Launch screen: the game's picture and colours while it loads, then the game opens like a real game.
+    const t0 = performance.now(), mine = ++launched;
+    $('game').classList.remove('launch'); void $('game').offsetWidth; $('game').classList.add('launch');
+    stage.innerHTML = `<div class="kog-splash" style="--c1:${game.sky[0]};--c2:${game.sky[1]}"><div class="ic">${Ark.G[game.g] || ''}</div><b>${esc(game.t)}</b><span class="ready">Get ready…</span></div>`;
+    load(id).then(() => new Promise(ok => setTimeout(ok, Math.max(0, 450 - (performance.now() - t0))))).then(() => {
+      if (location.hash.slice(1) !== id || mine !== launched) return;
+      current = id;
+      Ark.games[id].mount(stage, game);
+    }).catch(() => {
+      stage.innerHTML = `<h2>${game.t}</h2><p class="story">This game didn’t load. Check your internet connection, then try again.</p>
+        <div class="row"><button class="btn" id="retry">Try again</button><a class="btn more" href="#all">All Games</a></div>`;
+      stage.querySelector('#retry').onclick = route;
+    });
+  }
+  addEventListener('hashchange', route);
+  route();
+})();
+</script>
+
+</body></html>
