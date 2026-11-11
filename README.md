@@ -6,4 +6,3 @@ Every game has Easy, Normal and Hard, saves stars on the player's own device, an
 Play. Discover. Learn. Grow.
 
 Made by GIDI. Scripture quotations from the King James Version.
-Live site: https://kogarcade.netlify.app
